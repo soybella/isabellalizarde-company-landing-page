@@ -4,7 +4,7 @@
 
 body {
   box-sizing: border-box;
-  background: #24053e;
+  background: linear-gradient(to bottom, #24053e 50%, white 50%);
   color: white;
 }
 
@@ -18,18 +18,52 @@ nav {
 
 nav a {
   color: white;
+  padding-block-end: 0.2rem;
   text-decoration: none;
-  border-block-end: 1px solid green;
+  border-block-end: 2px solid green;
 }
 
-header h1 {
+main h1 {
   text-align: center;
+  font-size: 5rem;
+  max-inline-size: 39rem;
+  margin-inline: auto;
+  padding-block-end: 1rem;
+}
+
+main span {
+  /* text-decoration: underline; */
+  /* padding-block-end: 0.2rem; */
+  border-block-end: 5px solid green;
+  /* text-decoration: underline; */
 }
 
 button {
   display: block;
   margin-inline-start: auto;
   margin-inline-end: auto;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  list-style-type: none;
+  text-align: center;
+}
+
+ul h2 {
+  border: 0.5px solid white;
+  border-radius: 50%;
+  max-inline-size: fit-content;
+  block-size: auto;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+  font-family: Superclarendon, "Bookman Old Style", "URW Bookman",
+    "URW Bookman L", "Georgia Pro", Georgia, serif;
+  font-weight: lighter;
+  font-size: 1rem;
 }
 
 .iPhone-img {
