@@ -1,0 +1,41 @@
+:root {
+  font-size: clamp(1rem, 0.8rem + 1vw, 3rem);
+}
+
+body {
+  box-sizing: border-box;
+  background: #24053e;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border: 1px solid gray;
+  margin-inline: 4rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  border-block-end: 1px solid green;
+}
+
+header h1 {
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.iPhone-img {
+  max-inline-size: 100%;
+}
+
+.company-name {
+  font-size: 1.3rem;
+}
