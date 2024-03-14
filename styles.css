@@ -1,10 +1,12 @@
 :root {
   font-size: clamp(1rem, 0.8rem + 1vw, 3rem);
+  --dark-purple: #24053e;
+  --light-green: #44ffa1;
 }
 
 body {
   box-sizing: border-box;
-  background: linear-gradient(to bottom, #24053e 50%, white 50%);
+  background: linear-gradient(to bottom, var(--dark-purple) 50%, white 50%);
   color: white;
 }
 
@@ -20,7 +22,7 @@ nav a {
   color: white;
   padding-block-end: 0.2rem;
   text-decoration: none;
-  border-block-end: 2px solid green;
+  border-block-end: 2px solid var(--light-green);
 }
 
 main h1 {
@@ -28,14 +30,7 @@ main h1 {
   font-size: 5rem;
   max-inline-size: 39rem;
   margin-inline: auto;
-  padding-block-end: 1rem;
-}
-
-main span {
-  /* text-decoration: underline; */
-  /* padding-block-end: 0.2rem; */
-  border-block-end: 5px solid green;
-  /* text-decoration: underline; */
+  padding-block-end: 0;
 }
 
 button {
@@ -50,10 +45,11 @@ ul {
   gap: 1rem;
   list-style-type: none;
   text-align: center;
+  color: var(--dark-purple);
 }
 
 ul h2 {
-  border: 0.5px solid white;
+  border: 0.5px solid var(--dark-purple);
   border-radius: 50%;
   max-inline-size: fit-content;
   block-size: auto;
@@ -72,4 +68,11 @@ ul h2 {
 
 .company-name {
   font-size: 1.3rem;
+}
+
+.underlined-word {
+  display: inline-block;
+  border-block-end: 5px solid var(--light-green);
+  max-height: 5rem;
+  padding-bottom: 0;
 }
