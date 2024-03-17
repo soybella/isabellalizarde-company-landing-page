@@ -27,16 +27,23 @@ nav a {
 
 main h1 {
   text-align: center;
-  font-size: 5rem;
-  max-inline-size: 39rem;
+  font-weight: lighter;
+  font-size: 4rem;
+  max-inline-size: 30rem;
   margin-inline: auto;
-  padding-block-end: 0;
+  margin-block: 1rem;
+  /* margin-inline-start: 1rem; */
+  /* margin-inline-end: 1rem; */
+  /* padding-block-end: 0; */
+  border: 1px solid white;
 }
 
 button {
   display: block;
   margin-inline-start: auto;
   margin-inline-end: auto;
+  padding: 1em 1.8em;
+  font-size: 0.8em;
 }
 
 ul {
@@ -73,6 +80,6 @@ ul h2 {
 .underlined-word {
   display: inline-block;
   border-block-end: 5px solid var(--light-green);
-  max-height: 5rem;
+  max-height: 4rem;
   padding-bottom: 0;
 }
