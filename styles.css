@@ -14,8 +14,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  border: 1px solid gray;
+  border: 1px solid white;
   margin-inline: 4rem;
+  padding-block-end: 1.5rem;
 }
 
 nav a {
@@ -32,9 +33,7 @@ main h1 {
   max-inline-size: 30rem;
   margin-inline: auto;
   margin-block: 1rem;
-  /* margin-inline-start: 1rem; */
-  /* margin-inline-end: 1rem; */
-  /* padding-block-end: 0; */
+
   border: 1px solid white;
 }
 
@@ -42,8 +41,8 @@ button {
   display: block;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  padding: 1em 1.8em;
-  font-size: 0.8em;
+  padding: 1rem 1.8rem;
+  font-size: 0.8rem;
 }
 
 ul {
@@ -69,12 +68,20 @@ ul h2 {
   font-size: 1rem;
 }
 
+.header-image-container {
+  max-inline-size: 80%;
+  border: 1px solid white;
+  margin-inline: auto;
+}
+
 .iPhone-img {
   max-inline-size: 100%;
+  border: 1px solid white;
+  padding-block: 3.5rem;
 }
 
 .company-name {
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 
 .underlined-word {
