@@ -6,8 +6,15 @@
 
 body {
   box-sizing: border-box;
-  background: linear-gradient(to bottom, var(--dark-purple) 50%, white 50%);
+  /* background: linear-gradient(to bottom, var(--dark-purple) 50%, white 50%); */
+  border-radius: 50% / 20px;
+
+  margin: 0;
   color: white;
+}
+
+header {
+  background: var(--dark-purple);
 }
 
 nav {
@@ -26,23 +33,13 @@ nav a {
   border-block-end: 2px solid var(--light-green);
 }
 
-main h1 {
-  text-align: center;
-  font-weight: lighter;
-  font-size: 4rem;
-  max-inline-size: 30rem;
-  margin-inline: auto;
-  margin-block: 1rem;
-
-  border: 1px solid white;
-}
-
 button {
   display: block;
   margin-inline-start: auto;
   margin-inline-end: auto;
   padding: 1rem 1.8rem;
   font-size: 0.8rem;
+  /* margin-block: 5rem; */
 }
 
 ul {
@@ -68,16 +65,38 @@ ul h2 {
   font-size: 1rem;
 }
 
+.main-heading {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 4rem;
+  max-inline-size: 30rem;
+  margin-inline: auto;
+  margin-block: 1rem;
+  border: 1px solid white;
+}
+
 .header-image-container {
-  max-inline-size: 80%;
+  /* position: absolute; */
+  /* max-inline-size: 80%; */
   border: 1px solid white;
   margin-inline: auto;
+  /* overflow: hidden; */
+  /* background: var(--dark-purple);
+  border-radius: 50% / 20px; */
+  /* padding-block-start: 3rem; */
+  /* margin-block-start: 0; */
 }
 
 .iPhone-img {
+  position: absolute;
   max-inline-size: 100%;
   border: 1px solid white;
-  padding-block: 3.5rem;
+  /* background: var(--dark-purple);
+  border-radius: 50% / 20px; */
+  /* top: 50%; */
+  /* left: 50%; */
+  transform: translateY(-50%);
+  /* margin-block-start: -7rem; */
 }
 
 .company-name {
@@ -89,4 +108,11 @@ ul h2 {
   border-block-end: 5px solid var(--light-green);
   max-height: 4rem;
   padding-bottom: 0;
+}
+
+.curved-background {
+  position: relative;
+  /* height: 100vh; */
+  background: var(--dark-purple);
+  border-radius: 50% / 20px;
 }
