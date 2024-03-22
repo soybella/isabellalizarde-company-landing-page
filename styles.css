@@ -1,5 +1,5 @@
 :root {
-  font-size: clamp(1rem, 0.8rem + 1vw, 3rem);
+  /* font-size: clamp(1rem, 0.8rem + 1vw, 3rem); */
   --dark-purple: #24053e;
   --light-green: #44ffa1;
 }
@@ -23,7 +23,6 @@ nav {
   align-items: baseline;
   border: 1px solid white;
   margin-inline: 4rem;
-  padding-block-end: 1.5rem;
 }
 
 nav a {
@@ -39,7 +38,7 @@ button {
   margin-inline-end: auto;
   padding: 1rem 1.8rem;
   font-size: 0.8rem;
-  /* margin-block: 5rem; */
+  /* margin-block-end: 5rem; */
 }
 
 ul {
@@ -68,51 +67,46 @@ ul h2 {
 .main-heading {
   text-align: center;
   font-weight: lighter;
-  font-size: 4rem;
-  max-inline-size: 30rem;
+  font-size: 5rem;
+  max-inline-size: 16ch;
   margin-inline: auto;
   margin-block: 1rem;
   border: 1px solid white;
 }
 
 .header-image-container {
-  /* position: absolute; */
-  /* max-inline-size: 80%; */
+  display: flex;
+  justify-content: center;
   border: 1px solid white;
-  margin-inline: auto;
-  /* overflow: hidden; */
-  /* background: var(--dark-purple);
-  border-radius: 50% / 20px; */
-  /* padding-block-start: 3rem; */
-  /* margin-block-start: 0; */
+  margin-inline: 2rem;
+  /* margin-block: 2rem; */
 }
 
 .iPhone-img {
-  position: absolute;
+  /* position: relative; */
   max-inline-size: 100%;
   border: 1px solid white;
-  /* background: var(--dark-purple);
-  border-radius: 50% / 20px; */
-  /* top: 50%; */
-  /* left: 50%; */
-  transform: translateY(-50%);
-  /* margin-block-start: -7rem; */
+  /* border-radius: 50% / 20px; */
+  /* transform: translateY(50%); */
 }
 
 .company-name {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .underlined-word {
   display: inline-block;
   border-block-end: 5px solid var(--light-green);
-  max-height: 4rem;
+  max-height: 5rem;
   padding-bottom: 0;
 }
 
 .curved-background {
-  position: relative;
-  /* height: 100vh; */
+  /* position: relative; */
+  min-height: 80vh;
+  min-height: 80svh;
   background: var(--dark-purple);
   border-radius: 50% / 20px;
+
+  /* padding-block-end: 9rem; */
 }
