@@ -2,6 +2,8 @@
   /* font-size: clamp(1rem, 0.8rem + 1vw, 3rem); */
   --dark-purple: #24053e;
   --light-green: #44ffa1;
+  --header-font-style: "Fraunces", serif;
+  /* font-optical-sizing: auto; */
 }
 
 body {
@@ -73,6 +75,8 @@ ul h2 {
   margin-inline: auto;
   margin-block: 1rem;
   border: 1px solid white;
+  font-family: var(--header-font-style);
+  font-weight: 600;
 }
 
 .header-image-container {
@@ -87,6 +91,7 @@ ul h2 {
   max-inline-size: 100%;
   border: 1px solid white;
   transform: translateY(60%);
+  z-index: 1;
 }
 
 .company-name {
@@ -102,14 +107,17 @@ ul h2 {
 
 .hero {
   background: var(--dark-purple);
-  border-bottom-left-radius: 300% 20%;
-  border-bottom-right-radius: 300% 30%;
+  position: relative;
+  overflow: visible;
+  border-bottom-left-radius: 100% 20%;
+  border-bottom-right-radius: 100% 20%;
+  /* clip-path: path("M 0 0 L 100% 0 L 100% 80% Q 50% 100% 0 80% Z"); */
   padding-block-end: 17rem;
 }
 
-@media (max-width: 37.5rem) {
+/* @media (max-width: 37.5rem) {
   .hero {
     padding-block-end: 13rem;
     transition: 300ms ease-in;
   }
-}
+} */
