@@ -25,6 +25,7 @@ nav {
 }
 
 nav a {
+  font-size: 1.2rem;
   color: white;
   padding-block-end: 0.2rem;
   text-decoration: none;
@@ -36,7 +37,10 @@ button {
   margin-inline-start: auto;
   margin-inline-end: auto;
   padding: 1rem 1.8rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  background: var(--light-green);
+  border: none;
+  font-weight: bold;
 }
 
 ul {
@@ -68,12 +72,12 @@ ul h2 {
 
 .main-heading h1 {
   text-align: center;
-  font-weight: lighter;
+  /* font-weight: lighter; */
   font-size: 5rem;
   line-height: 80px;
-  max-inline-size: 16ch;
+  max-inline-size: 11ch;
   margin-inline: auto;
-  margin-block: 1rem;
+  margin-block: 2rem;
   border: 1px solid white;
   font-family: var(--header-font-style);
   font-weight: 600;
@@ -84,14 +88,17 @@ ul h2 {
   justify-content: center;
   align-items: center;
   border: 1px solid white;
+  margin-block: 1rem;
+  /* overflow: visible; */
 }
 
 .iPhone-img {
   position: absolute;
   max-inline-size: 100%;
   border: 1px solid white;
-  transform: translateY(60%);
-  z-index: 1;
+  transform: translateY(-10%);
+  /* overflow: visible; */
+  /* z-index: 1; */
 }
 
 .company-name {
@@ -107,11 +114,10 @@ ul h2 {
 
 .hero {
   background: var(--dark-purple);
-  position: relative;
-  overflow: visible;
-  border-bottom-left-radius: 100% 20%;
-  border-bottom-right-radius: 100% 20%;
-  /* clip-path: path("M 0 0 L 100% 0 L 100% 80% Q 50% 100% 0 80% Z"); */
+  /* position: relative; */
+  /* border-bottom-left-radius: 100% 20%;
+  border-bottom-right-radius: 100% 20%; */
+  clip-path: ellipse(100% 55% at 50% 45%);
   padding-block-end: 17rem;
 }
 
