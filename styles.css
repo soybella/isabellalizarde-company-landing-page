@@ -3,25 +3,28 @@
   --dark-purple: #24053e;
   --light-green: #44ffa1;
   --header-font-style: "Fraunces", serif;
-  /* font-optical-sizing: auto; */
 }
 
 body {
   box-sizing: border-box;
-  margin: 0;
   color: white;
+  font-family: var(--header-font-style);
 }
 
 header {
   background: var(--dark-purple);
 }
 
-nav {
+nav ul {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   border: 1px solid white;
-  margin-inline: 2rem;
+  list-style-type: none;
+  max-inline-size: 75%;
+  margin-inline: auto;
+  margin-block: 0;
+  padding-block: 2rem;
 }
 
 nav a {
@@ -36,23 +39,24 @@ button {
   display: block;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  padding: 1rem 1.8rem;
+  padding: 1.8rem 3rem;
   font-size: 1rem;
   background: var(--light-green);
   border: none;
   font-weight: bold;
+  border-radius: 0.3rem;
 }
 
-ul {
+/* ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   list-style-type: none;
   text-align: center;
   color: var(--dark-purple);
-}
+} */
 
-ul h2 {
+/* ul h2 {
   border: 0.5px solid var(--dark-purple);
   border-radius: 50%;
   max-inline-size: fit-content;
@@ -64,7 +68,7 @@ ul h2 {
     "URW Bookman L", "Georgia Pro", Georgia, serif;
   font-weight: lighter;
   font-size: 1rem;
-}
+} */
 
 .main-heading {
   border: 1px solid white;
@@ -72,7 +76,6 @@ ul h2 {
 
 .main-heading h1 {
   text-align: center;
-  /* font-weight: lighter; */
   font-size: 5rem;
   line-height: 80px;
   max-inline-size: 11ch;
@@ -83,13 +86,26 @@ ul h2 {
   font-weight: 600;
 }
 
+.main-heading::before {
+  content: url("./images/bg-pattern-1.svg");
+  position: absolute;
+  left: 0;
+  transform: translateX(-40%);
+}
+
+.main-heading::after {
+  content: url("./images/bg-pattern-2.svg");
+  position: absolute;
+  right: 0;
+  transform: translateX(30%);
+}
+
 .header-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid white;
   margin-block: 1rem;
-  /* overflow: visible; */
 }
 
 .iPhone-img {
@@ -97,12 +113,6 @@ ul h2 {
   max-inline-size: 100%;
   border: 1px solid white;
   transform: translateY(-10%);
-  /* overflow: visible; */
-  /* z-index: 1; */
-}
-
-.company-name {
-  font-size: 2.5rem;
 }
 
 .underlined-word {
@@ -112,18 +122,18 @@ ul h2 {
   padding-bottom: 0;
 }
 
-.hero {
+.curved-bg {
   background: var(--dark-purple);
-  /* position: relative; */
-  /* border-bottom-left-radius: 100% 20%;
-  border-bottom-right-radius: 100% 20%; */
-  clip-path: ellipse(100% 55% at 50% 45%);
-  padding-block-end: 17rem;
+  clip-path: ellipse(110% 55% at 50% 45%);
+  padding-block-end: 18rem;
 }
 
-/* @media (max-width: 37.5rem) {
-  .hero {
-    padding-block-end: 13rem;
-    transition: 300ms ease-in;
+@media (max-width: 48rem) {
+  .iPhone-img {
+    max-inline-size: 90%;
   }
-} */
+
+  .curved-bg {
+    padding-block-end: 15rem;
+  }
+}
