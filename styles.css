@@ -25,6 +25,7 @@ nav ul {
   margin-inline: auto;
   margin-block: 0;
   padding-block: 2rem;
+  padding-inline-start: 0;
 }
 
 nav a {
@@ -69,6 +70,11 @@ button {
   font-weight: lighter;
   font-size: 1rem;
 } */
+
+.company-name {
+  max-inline-size: 6rem;
+  /* margin-inline-start: 0; */
+}
 
 .main-heading {
   border: 1px solid white;
