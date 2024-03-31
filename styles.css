@@ -8,6 +8,7 @@
 body {
   box-sizing: border-box;
   color: white;
+  margin: 0;
   font-family: var(--header-font-style);
 }
 
@@ -82,7 +83,7 @@ button {
 
 .main-heading h1 {
   text-align: center;
-  font-size: 5rem;
+  font-size: 8vmin;
   line-height: 80px;
   max-inline-size: 11ch;
   margin-inline: auto;
@@ -134,12 +135,20 @@ button {
   padding-block-end: 18rem;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .iPhone-img {
     max-inline-size: 90%;
   }
 
   .curved-bg {
     padding-block-end: 15rem;
+  }
+
+  .main-heading::before {
+    content: none;
+  }
+
+  .main-heading::after {
+    content: none;
   }
 }
