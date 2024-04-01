@@ -3,6 +3,7 @@
   --dark-purple: #24053e;
   --light-green: #44ffa1;
   --header-font-style: "Fraunces", serif;
+  --transition: all 0.7s ease;
 }
 
 body {
@@ -83,7 +84,7 @@ button {
 
 .main-heading h1 {
   text-align: center;
-  font-size: 8vmin;
+  font-size: 5rem;
   line-height: 80px;
   max-inline-size: 11ch;
   margin-inline: auto;
@@ -98,6 +99,7 @@ button {
   position: absolute;
   left: 0;
   transform: translateX(-40%);
+  transition: var(--transition);
 }
 
 .main-heading::after {
@@ -105,6 +107,7 @@ button {
   position: absolute;
   right: 0;
   transform: translateX(30%);
+  transition: var(--transition);
 }
 
 .header-image-container {
@@ -135,9 +138,20 @@ button {
   padding-block-end: 18rem;
 }
 
-@media (max-width: 768px) {
+@media (width < 1200px) {
+  .main-heading::before {
+    transform: translateX(-65%);
+  }
+
+  .main-heading::after {
+    transform: translateX(55%);
+  }
+}
+
+@media (width < 768px) {
   .iPhone-img {
     max-inline-size: 90%;
+    /* transition: var(--transition); */
   }
 
   .curved-bg {
