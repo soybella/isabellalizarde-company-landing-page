@@ -1,5 +1,4 @@
 :root {
-  /* font-size: clamp(1rem, 0.8rem + 1vw, 3rem); */
   --dark-purple: hsl(273, 85%, 13%);
   --light-green: hsl(150, 100%, 63%);
   --light-purple: hsl(276, 100%, 99%);
@@ -54,10 +53,9 @@ button {
 section ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   gap: 1rem;
   list-style-type: none;
-  /* padding-block-start: 13rem; */
+  padding-inline: 0;
   text-align: center;
   color: var(--dark-purple);
   background: var(--light-purple);
@@ -75,6 +73,10 @@ section ul h2 {
     "URW Bookman L", "Georgia Pro", Georgia, serif;
   font-weight: lighter;
   font-size: 1rem;
+}
+
+.section-descriptions li {
+  margin-inline: 2rem;
 }
 
 .section-descriptions h2 {
@@ -175,14 +177,18 @@ section ul h2 {
     grid-template-columns: 1fr;
   }
 
+  .section-numbers {
+    margin-inline-start: 5rem;
+  }
+
+  .section-descriptions {
+    margin-inline-end: 5rem;
+    text-align: start;
+  }
+
   .section-descriptions h2 {
     display: none;
   }
-
-  /* .section-descriptions {
-    display: grid;
-    grid-template-columns: 1fr;
-  } */
 }
 
 @media (width < 768px) {
@@ -194,13 +200,8 @@ section ul h2 {
     padding-block-end: 15rem;
   }
 
-  /* .curved-bg-light {
-    grid-template-columns: 1fr;
-  } */
-
   .section-descriptions,
   .section-numbers {
-    /* display: grid; */
     grid-template-columns: 1fr;
   }
 
