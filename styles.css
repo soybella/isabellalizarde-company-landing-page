@@ -1,7 +1,8 @@
 :root {
   /* font-size: clamp(1rem, 0.8rem + 1vw, 3rem); */
-  --dark-purple: #24053e;
-  --light-green: #44ffa1;
+  --dark-purple: hsl(273, 85%, 13%);
+  --light-green: hsl(150, 100%, 63%);
+  --light-purple: hsl(276, 100%, 99%);
   --header-font-style: "Fraunces", serif;
   --transition: all 0.7s ease;
 }
@@ -50,16 +51,19 @@ button {
   border-radius: 0.3rem;
 }
 
-/* ul {
+section ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   gap: 1rem;
   list-style-type: none;
+  /* padding-block-start: 13rem; */
   text-align: center;
   color: var(--dark-purple);
-} */
+  background: var(--light-purple);
+}
 
-/* ul h2 {
+section ul h2 {
   border: 0.5px solid var(--dark-purple);
   border-radius: 50%;
   max-inline-size: fit-content;
@@ -71,15 +75,19 @@ button {
     "URW Bookman L", "Georgia Pro", Georgia, serif;
   font-weight: lighter;
   font-size: 1rem;
-} */
+}
+
+.section-descriptions h2 {
+  display: none;
+}
 
 .company-name {
   max-inline-size: 6rem;
-  /* margin-inline-start: 0; */
 }
 
 .main-heading {
   border: 1px solid white;
+  position: relative;
 }
 
 .main-heading h1 {
@@ -123,6 +131,7 @@ button {
   max-inline-size: 100%;
   border: 1px solid white;
   transform: translateY(-10%);
+  z-index: 3;
 }
 
 .underlined-word {
@@ -132,13 +141,23 @@ button {
   padding-bottom: 0;
 }
 
-.curved-bg {
+.curved-bg-dark {
   background: var(--dark-purple);
   clip-path: ellipse(110% 55% at 50% 45%);
   padding-block-end: 18rem;
+  z-index: 2;
+  overflow: hidden;
 }
 
-@media (width < 1200px) {
+.curved-bg-light {
+  background: var(--light-purple);
+  clip-path: ellipse(110% 55% at 50% 45%);
+  padding-block: 13rem;
+  z-index: 1;
+  transform: translateY(-5%);
+}
+
+@media (width < 1200px) and (width >= 768px) {
   .main-heading::before {
     transform: translateX(-65%);
   }
@@ -146,16 +165,47 @@ button {
   .main-heading::after {
     transform: translateX(55%);
   }
+
+  .curved-bg-light {
+    display: flex;
+  }
+
+  .section-numbers,
+  .section-descriptions {
+    grid-template-columns: 1fr;
+  }
+
+  .section-descriptions h2 {
+    display: none;
+  }
+
+  /* .section-descriptions {
+    display: grid;
+    grid-template-columns: 1fr;
+  } */
 }
 
 @media (width < 768px) {
   .iPhone-img {
     max-inline-size: 90%;
-    /* transition: var(--transition); */
   }
 
-  .curved-bg {
+  .curved-bg-dark {
     padding-block-end: 15rem;
+  }
+
+  /* .curved-bg-light {
+    grid-template-columns: 1fr;
+  } */
+
+  .section-descriptions,
+  .section-numbers {
+    /* display: grid; */
+    grid-template-columns: 1fr;
+  }
+
+  .section-descriptions h2 {
+    display: block;
   }
 
   .main-heading::before {
@@ -164,5 +214,9 @@ button {
 
   .main-heading::after {
     content: none;
+  }
+
+  .section-numbers {
+    display: none;
   }
 }
