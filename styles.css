@@ -75,8 +75,19 @@ section ul h2 {
   font-size: 1rem;
 }
 
+.section-descriptions {
+  border: 1px solid black;
+  margin-inline: 10rem;
+}
+
+.section-numbers {
+  border: 1px solid red;
+  margin-inline: 10rem;
+}
+
 .section-descriptions li {
-  margin-inline: 2rem;
+  margin-inline: 1rem;
+  border: 1px solid green;
 }
 
 .section-descriptions h2 {
@@ -154,9 +165,14 @@ section ul h2 {
 .curved-bg-light {
   background: var(--light-purple);
   clip-path: ellipse(110% 55% at 50% 45%);
-  padding-block: 13rem;
+  padding-block: 18rem;
   z-index: 1;
-  transform: translateY(-5%);
+  transform: translateY(-12%);
+  border: 1px solid blue;
+}
+
+address {
+  background: var(--dark-purple);
 }
 
 @media (width < 1200px) and (width >= 768px) {
@@ -179,10 +195,12 @@ section ul h2 {
 
   .section-numbers {
     margin-inline-start: 5rem;
+    margin-inline-end: 2rem;
   }
 
   .section-descriptions {
     margin-inline-end: 5rem;
+    margin-inline-start: 0;
     text-align: start;
   }
 
