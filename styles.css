@@ -165,14 +165,36 @@ section ul h2 {
 .curved-bg-light {
   background: var(--light-purple);
   clip-path: ellipse(110% 55% at 50% 45%);
-  padding-block: 18rem;
+  padding-block-start: 18rem;
   z-index: 1;
   transform: translateY(-12%);
   border: 1px solid blue;
 }
 
+footer {
+  background: blue;
+  display: flex;
+  margin-inline: 5rem;
+}
+
+footer img {
+  max-inline-size: 100%;
+}
+
 address {
   background: var(--dark-purple);
+  position: absolute;
+  max-inline-size: 50%;
+  transform: translate(70%, 50%);
+  padding-block: 3rem;
+}
+
+address > * {
+  padding-inline: 3rem;
+}
+
+footer button {
+  margin-inline-start: 3rem;
 }
 
 @media (width < 1200px) and (width >= 768px) {
