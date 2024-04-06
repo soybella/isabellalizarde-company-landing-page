@@ -3,6 +3,7 @@
   --light-green: hsl(150, 100%, 63%);
   --light-purple: hsl(276, 100%, 99%);
   --header-font-style: "Fraunces", serif;
+  --paragraph-font-family: "Manrope", sans-serif;
   --transition: all 0.7s ease;
 }
 
@@ -10,11 +11,15 @@ body {
   box-sizing: border-box;
   color: white;
   margin: 0;
-  font-family: var(--header-font-style);
+  /* font-family: var(--header-font-style); */
 }
 
 header {
   background: var(--dark-purple);
+}
+
+p {
+  font-family: var(--paragraph-font-family);
 }
 
 nav ul {
@@ -75,6 +80,13 @@ section ul h2 {
   font-size: 1rem;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--header-font-style);
+}
+
 .section-descriptions {
   border: 1px solid black;
   margin-inline: 10rem;
@@ -107,7 +119,7 @@ section ul h2 {
   text-align: center;
   font-size: 5rem;
   line-height: 80px;
-  max-inline-size: 11ch;
+  max-inline-size: 16ch;
   margin-inline: auto;
   margin-block: 2rem;
   border: 1px solid white;
@@ -181,7 +193,15 @@ footer img {
   max-inline-size: 100%;
 }
 
-address {
+footer h2 {
+  font-size: 3.5rem;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+.footer-description {
   background: var(--dark-purple);
   position: absolute;
   max-inline-size: 50%;
@@ -189,12 +209,13 @@ address {
   padding-block: 3rem;
 }
 
-address > * {
+.footer-description > * {
   padding-inline: 3rem;
 }
 
 footer button {
   margin-inline-start: 3rem;
+  padding: 1.2rem 1.7rem;
 }
 
 @media (width < 1200px) and (width >= 768px) {
