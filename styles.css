@@ -21,7 +21,7 @@ header {
 p {
   font-family: var(--paragraph-font-family);
   line-height: 2rem;
-  font-size: calc(0.3rem + 1vw);
+  font-size: calc(0.75rem + 0.5vw);
 }
 
 nav ul {
@@ -201,38 +201,30 @@ footer img {
 }
 
 footer h2 {
-  font-size: calc(0.75rem + 3.5vw);
+  font-size: calc(0.75rem + 2.5vw);
   border: 1px solid white;
-  /* margin-block: 0; */
+  margin-block: 0;
 }
 
 footer p {
   border: 1px solid white;
-  /* max-inline-size: 602px; */
-  /* font-size: 18px; */
+  margin-block: 2em;
 }
 
 .footer-description {
   background: var(--dark-purple);
   max-inline-size: 46rem;
-  padding-block: 3rem;
-  padding-inline: 3rem;
+  padding-block: 5rem;
+  padding-inline: 4rem;
   border: 1px solid white;
-  /* min-block-size: 514px; */
-  /* border: 1px solid white; */
-  transform: translate(-6rem, 10rem);
+  transform: translate(-3.5rem, 10rem);
 }
 
-/* .footer-description > * {
-  padding-inline: 3rem;
-} */
-
 footer button {
-  /* align-items: flex-start; */
   margin-inline-start: 0;
 }
 
-@media (width < 1200px) and (width >= 768px) {
+@media (width < 992px) {
   .main-heading::before {
     transform: translateX(-65%);
   }
@@ -264,6 +256,33 @@ footer button {
   .section-descriptions h2 {
     display: none;
   }
+
+  .footer-description {
+    transform: translateY(-10%);
+  }
+
+  footer img {
+    min-block-size: 18rem;
+    transform: none;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer p {
+    min-block-size: 11rem;
+    max-inline-size: 17.5rem;
+    margin-inline: auto;
+    margin-block: 2rem;
+    text-align: center;
+    border: 1px solid white;
+  }
+
+  footer button {
+    margin-inline: auto;
+  }
 }
 
 @media (width < 768px) {
@@ -278,6 +297,8 @@ footer button {
   .section-descriptions,
   .section-numbers {
     grid-template-columns: 1fr;
+    margin-inline: auto;
+    text-align: center;
   }
 
   .section-descriptions h2 {
@@ -294,32 +315,5 @@ footer button {
 
   .section-numbers {
     display: none;
-  }
-
-  .footer-description {
-    transform: none;
-  }
-
-  footer img {
-    min-block-size: 18rem;
-    transform: none;
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* footer button {
-    margin: auto;
-  } */
-
-  footer p {
-    min-block-size: 165px;
-    max-inline-size: 280px;
-    margin-inline: auto;
-    margin-block: 2rem;
-    text-align: center;
-    border: 1px solid white;
   }
 }
