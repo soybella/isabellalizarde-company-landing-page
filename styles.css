@@ -11,7 +11,6 @@ body {
   box-sizing: border-box;
   color: white;
   margin: 0;
-  /* font-family: var(--header-font-style); */
 }
 
 header {
@@ -43,6 +42,7 @@ nav a {
   padding-block-end: 0.2rem;
   text-decoration: none;
   border-block-end: 2px solid var(--light-green);
+  font-family: var(--paragraph-font-family);
 }
 
 button {
@@ -72,14 +72,15 @@ section ul h2 {
   border: 0.5px solid var(--dark-purple);
   border-radius: 50%;
   max-inline-size: fit-content;
-  block-size: auto;
+  /* block-size: auto; */
   margin-inline: auto;
   padding-inline: 1rem;
-  padding-block: 0.6rem;
-  font-family: Superclarendon, "Bookman Old Style", "URW Bookman",
-    "URW Bookman L", "Georgia Pro", Georgia, serif;
-  font-weight: lighter;
-  font-size: 1rem;
+  padding-block: 0.5rem;
+  /* font-family: Superclarendon, "Bookman Old Style", "URW Bookman",
+    "URW Bookman L", "Georgia Pro", Georgia, serif; */
+  font-weight: 400;
+  /* font-size: 1.5rem; */
+  font-size: calc(0.75rem + 1.2vw);
 }
 
 h1,
@@ -87,7 +88,7 @@ h2,
 h3,
 h4 {
   font-family: var(--header-font-style);
-  /* font-size: calc(0.75rem + 3.5vw); */
+  font-weight: 400;
 }
 
 .section-descriptions {
@@ -107,6 +108,10 @@ h4 {
 
 .section-descriptions h2 {
   display: none;
+}
+
+.section-descriptions h3 {
+  font-size: calc(1rem + 1.5vw);
 }
 
 .company-name {
@@ -186,13 +191,13 @@ h4 {
   border: 1px solid blue;
 }
 
-footer {
+.call-to-action {
   background: blue;
   display: flex;
   justify-content: center;
 }
 
-footer img {
+.call-to-action img {
   max-inline-size: 100%;
   block-size: auto;
   aspect-ratio: 2/1;
@@ -200,28 +205,66 @@ footer img {
   transform: translateX(10%);
 }
 
-footer h2 {
+.call-to-action h2 {
   font-size: calc(0.75rem + 2.5vw);
   border: 1px solid white;
   margin-block: 0;
 }
 
-footer p {
+.call-to-action p {
   border: 1px solid white;
   margin-block: 2em;
+  font-weight: lighter;
 }
 
-.footer-description {
+.call-to-action-description {
   background: var(--dark-purple);
   max-inline-size: 46rem;
   padding-block: 5rem;
-  padding-inline: 4rem;
+  padding-inline: 5rem;
   border: 1px solid white;
   transform: translate(-3.5rem, 10rem);
+  text-align: center;
 }
 
-footer button {
+.call-to-action-description::after {
+  content: url(./images/bg-pattern-3.svg);
+  position: absolute;
+  right: 0;
+  transform: translate(-20%, -30%);
+  transition: var(--transition);
+}
+
+.call-to-action button {
   margin-inline-start: 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 17rem;
+  margin-block-end: 3rem;
+  border: 1px solid black;
+}
+
+.company-name-footer {
+  border: 1px solid green;
+  margin-block-end: 2rem;
+}
+
+footer ul {
+  color: black;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  gap: 1.5rem;
+  border: 1px solid black;
+}
+
+footer i {
+  font-size: 20px;
 }
 
 @media (width < 992px) {
@@ -257,21 +300,26 @@ footer button {
     display: none;
   }
 
-  .footer-description {
+  .call-to-action-description {
     transform: translateY(-10%);
+    padding-block: 3rem;
   }
 
-  footer img {
+  .call-to-action-description::after {
+    display: none;
+  }
+
+  .call-to-action img {
     min-block-size: 18rem;
     transform: none;
   }
 
-  footer {
+  .call-to-action {
     flex-direction: column;
     align-items: center;
   }
 
-  footer p {
+  .call-to-action p {
     min-block-size: 11rem;
     max-inline-size: 17.5rem;
     margin-inline: auto;
@@ -280,8 +328,12 @@ footer button {
     border: 1px solid white;
   }
 
-  footer button {
+  .call-to-action button {
     margin-inline: auto;
+  }
+
+  footer {
+    margin-block-start: 5rem;
   }
 }
 
