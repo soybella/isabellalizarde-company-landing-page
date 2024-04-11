@@ -2,8 +2,9 @@
   --dark-purple: hsl(273, 85%, 13%);
   --light-green: hsl(150, 100%, 63%);
   --light-purple: hsl(276, 100%, 99%);
-  --header-font-style: "Fraunces", serif;
+  --header-font-family: "Fraunces", serif;
   --paragraph-font-family: "Manrope", sans-serif;
+  --small-font-size: calc(0.75rem + 0.5vw);
   --transition: all 0.7s ease;
 }
 
@@ -17,10 +18,15 @@ header {
   background: var(--dark-purple);
 }
 
+a {
+  text-decoration: none;
+  color: var(--dark-purple);
+}
+
 p {
   font-family: var(--paragraph-font-family);
   line-height: 2rem;
-  font-size: calc(0.75rem + 0.5vw);
+  font-size: var(--small-font-size);
 }
 
 nav ul {
@@ -37,7 +43,7 @@ nav ul {
 }
 
 nav a {
-  font-size: 1.2rem;
+  font-size: var(--small-font-size);
   color: white;
   padding-block-end: 0.2rem;
   text-decoration: none;
@@ -50,7 +56,7 @@ button {
   margin-inline-start: auto;
   margin-inline-end: auto;
   padding: 1.8rem 3rem;
-  font-size: 1rem;
+  font-size: var(--small-font-size);
   background: var(--light-green);
   border: none;
   font-weight: bold;
@@ -72,14 +78,10 @@ section ul h2 {
   border: 0.5px solid var(--dark-purple);
   border-radius: 50%;
   max-inline-size: fit-content;
-  /* block-size: auto; */
   margin-inline: auto;
   padding-inline: 1rem;
   padding-block: 0.5rem;
-  /* font-family: Superclarendon, "Bookman Old Style", "URW Bookman",
-    "URW Bookman L", "Georgia Pro", Georgia, serif; */
   font-weight: 400;
-  /* font-size: 1.5rem; */
   font-size: calc(0.75rem + 1.2vw);
 }
 
@@ -87,7 +89,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--header-font-style);
+  font-family: var(--header-font-family);
   font-weight: 400;
 }
 
@@ -125,13 +127,13 @@ h4 {
 
 .main-heading h1 {
   text-align: center;
-  font-size: 5rem;
+  font-size: calc(3rem + 3vw);
   line-height: 80px;
-  max-inline-size: 16ch;
+  max-inline-size: 13ch;
   margin-inline: auto;
   margin-block: 2rem;
   border: 1px solid white;
-  font-family: var(--header-font-style);
+  /* font-family: var(--header-font-family); */
   font-weight: 600;
 }
 
@@ -224,7 +226,7 @@ h4 {
   padding-inline: 5rem;
   border: 1px solid white;
   transform: translate(-3.5rem, 10rem);
-  text-align: center;
+  /* text-align: center; */
 }
 
 .call-to-action-description::after {
@@ -264,7 +266,7 @@ footer ul {
 }
 
 footer i {
-  font-size: 20px;
+  font-size: 1.4rem;
 }
 
 @media (width < 992px) {
@@ -367,5 +369,9 @@ footer i {
 
   .section-numbers {
     display: none;
+  }
+
+  .call-to-action-description {
+    text-align: center;
   }
 }
