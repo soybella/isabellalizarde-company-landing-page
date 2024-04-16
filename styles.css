@@ -197,6 +197,10 @@ footer i {
   margin-inline: 10rem;
 }
 
+.section-numbers {
+  margin-block-start: 6rem;
+}
+
 .section-descriptions li {
   margin-inline: 1rem;
 }
@@ -293,6 +297,7 @@ footer i {
   .section-descriptions {
     margin-inline-end: 5rem;
     margin-inline-start: 0;
+    margin-block-start: 6rem;
     text-align: start;
   }
 
