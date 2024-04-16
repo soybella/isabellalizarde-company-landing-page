@@ -357,6 +357,10 @@ footer i {
     margin-inline: auto;
   }
 
+  .section-descriptions {
+    margin-inline: 5rem;
+  }
+
   .section-descriptions h2 {
     display: block;
   }
