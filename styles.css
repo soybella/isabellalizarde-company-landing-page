@@ -42,7 +42,7 @@ nav a {
   font-family: var(--paragraph-font-family);
   color: white;
   padding-block-end: 0.2rem;
-  border-block-end: 2px solid var(--light-green);
+  border-block-end: 0.1rem solid var(--light-green);
   text-decoration: none;
   transition: 250ms ease-in-out;
 }
@@ -84,7 +84,7 @@ section ul {
 }
 
 section ul h2 {
-  border: 0.5px solid var(--dark-purple);
+  border: 0.03rem solid var(--dark-purple);
   border-radius: 50%;
   max-inline-size: fit-content;
   margin-inline: auto;
@@ -139,7 +139,7 @@ footer i {
   text-align: center;
   font-size: calc(3rem + 2.5vw);
   font-weight: 600;
-  line-height: 80px;
+  line-height: 5rem;
   max-inline-size: 13ch;
   margin-inline: auto;
   margin-block: 2rem;
@@ -260,14 +260,14 @@ footer i {
   color: var(--light-gray);
 }
 
-@media (width > 1600px) {
+@media (width > 100rem) {
   .underlined-word {
     padding-bottom: 0.5rem;
     margin-block-end: 0.5rem;
   }
 }
 
-@media (width < 992px) {
+@media (width < 62rem) {
   .main-heading::before {
     transform: translateX(-65%);
   }
@@ -336,7 +336,7 @@ footer i {
   }
 }
 
-@media (width < 768px) {
+@media (width < 48rem) {
   .iPhone-img {
     max-inline-size: 90%;
   }
