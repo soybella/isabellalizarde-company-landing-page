@@ -33,7 +33,7 @@ nav ul {
   max-inline-size: 75%;
   margin-inline: auto;
   margin-block: 0;
-  padding-block: 2rem;
+  padding-block: 3rem;
   padding-inline-start: 0;
 }
 
@@ -58,7 +58,7 @@ button {
   font-size: var(--small-font-size);
   margin-inline-start: auto;
   margin-inline-end: auto;
-  padding: 1.8rem 3rem;
+  padding: 1.3rem 3rem;
   font-weight: bold;
   border: none;
   border-radius: 0.3rem;
@@ -194,7 +194,7 @@ footer i {
 
 .section-descriptions,
 .section-numbers {
-  margin-inline: 10rem;
+  margin-inline: 8rem;
 }
 
 .section-numbers {
@@ -211,6 +211,10 @@ footer i {
 
 .section-descriptions h3 {
   font-size: calc(1rem + 1.5vw);
+}
+
+.section-descriptions p {
+  color: var(--light-gray);
 }
 
 .call-to-action {
