@@ -187,7 +187,7 @@ footer i {
   background: var(--light-purple);
   clip-path: ellipse(110% 55% at 50% 45%);
   padding-block-start: 18rem;
-  padding-block-end: 6rem;
+  padding-block-end: 7rem;
   transform: translateY(-12%);
   z-index: 1;
 }
@@ -206,7 +206,7 @@ footer i {
 }
 
 .section-descriptions h3 {
-  font-size: calc(0.75rem + 1vw);
+  font-size: calc(0.75rem + 1.2vw);
 }
 
 .section-descriptions p {
@@ -227,7 +227,7 @@ footer i {
 }
 
 .call-to-action h2 {
-  font-size: calc(0.75rem + 2.5vw);
+  font-size: calc(0.75rem + 2.6vw);
   margin-block: 0;
 }
 
